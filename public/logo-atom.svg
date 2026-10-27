@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <defs>
+    <linearGradient id="orbitCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+    <linearGradient id="orbitGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#FBBF24" />
+    </linearGradient>
+    <linearGradient id="coreGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="50%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="bookCover" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2540" />
+      <stop offset="100%" stop-color="#1E3A8A" />
+    </linearGradient>
+  </defs>
+
+  <!-- Atom Orbits -->
+  <ellipse cx="120" cy="110" rx="84" ry="34" transform="rotate(-30 120 110)" stroke="url(#orbitCyan)" stroke-width="4.5" stroke-dasharray="1 0" opacity="0.95" />
+  <ellipse cx="120" cy="110" rx="84" ry="34" transform="rotate(30 120 110)" stroke="url(#orbitGold)" stroke-width="4.5" stroke-dasharray="1 0" opacity="0.95" />
+  <ellipse cx="120" cy="110" rx="84" ry="32" transform="rotate(90 120 110)" stroke="url(#orbitCyan)" stroke-width="3.5" opacity="0.8" />
+
+  <!-- Electrons on Orbits -->
+  <circle cx="58" cy="74" r="5.5" fill="#38BDF8" />
+  <circle cx="182" cy="74" r="5.5" fill="#FBBF24" />
+  <circle cx="120" cy="28" r="5" fill="#0284C7" />
+  <circle cx="120" cy="192" r="5" fill="#F59E0B" />
+
+  <!-- Central Glowing Nucleus -->
+  <circle cx="120" cy="110" r="14" fill="#0A2540" stroke="#38BDF8" stroke-width="2.5" />
+  <circle cx="120" cy="110" r="7.5" fill="url(#coreGlow)" />
+  <!-- Rays / Energy Pulse -->
+  <path d="M120 90 L120 96 M120 124 L120 130 M100 110 L106 110 M134 110 L140 110" stroke="#FBBF24" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Open Book at Base -->
+  <!-- Left Page -->
+  <path d="M120 178 C100 168 65 168 44 176 L40 196 C62 188 98 188 120 198 Z" fill="url(#bookCover)" stroke="#38BDF8" stroke-width="2.5" />
+  <path d="M120 173 C102 163 68 163 48 171 L45 186 C66 179 99 179 120 189 Z" fill="#F8FAFC" />
+  <line x1="60" y1="175" x2="105" y2="181" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" />
+  <line x1="60" y1="181" x2="98" y2="186" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" />
+
+  <!-- Right Page -->
+  <path d="M120 178 C140 168 175 168 196 176 L200 196 C178 188 142 188 120 198 Z" fill="url(#bookCover)" stroke="#FBBF24" stroke-width="2.5" />
+  <path d="M120 173 C138 163 172 163 192 171 L195 186 C174 179 141 179 120 189 Z" fill="#F8FAFC" />
+  <line x1="135" y1="181" x2="180" y2="175" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" />
+  <line x1="142" y1="186" x2="180" y2="181" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" />
+
+  <!-- Spine / Center Spark -->
+  <path d="M120 162 L120 200" stroke="#0284C7" stroke-width="3" stroke-linecap="round" />
+  <polygon points="120,154 123,162 117,162" fill="#F59E0B" />
+</svg>
