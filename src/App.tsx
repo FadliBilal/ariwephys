@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ScreenTab, LkpdItem } from './types';
-import { DeviceFrame } from './components/common/DeviceFrame';
+import { AppLayout } from './components/common/AppLayout';
 import { Header } from './components/common/Header';
 import { BottomNav } from './components/common/BottomNav';
 import { LoginScreen } from './components/screens/LoginScreen';
@@ -15,14 +15,11 @@ import { ArCameraModal } from './components/modals/ArCameraModal';
 import { LkpdModal } from './components/modals/LkpdModal';
 
 export const App: React.FC = () => {
-  // Authentication State
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true);
   const [userEmail, setUserEmail] = useState<string>('fadhil.siswa@ariwephys.edu');
-
-  // Navigation State
   const [currentTab, setCurrentTab] = useState<ScreenTab>('beranda');
 
-  // Modal Dialog States
+  // Modals
   const [isAiOpen, setIsAiOpen] = useState<boolean>(false);
   const [aiInitialQuery, setAiInitialQuery] = useState<string | undefined>(undefined);
   const [isArOpen, setIsArOpen] = useState<boolean>(false);
@@ -55,15 +52,14 @@ export const App: React.FC = () => {
   };
 
   return (
-    <DeviceFrame
-      activeTabTitle={currentTab}
+    <AppLayout
       onOpenAr={handleOpenAr}
       onOpenAi={() => handleOpenAi()}
     >
       {!isLoggedIn ? (
         <LoginScreen onLoginSuccess={handleLoginSuccess} />
       ) : (
-        <div className="flex flex-col min-h-full bg-slate-50 relative">
+        <div className="flex flex-col min-h-full flex-1 bg-slate-50 relative">
           {/* Top Sticky Header */}
           <Header
             currentTab={currentTab}
@@ -106,7 +102,7 @@ export const App: React.FC = () => {
         </div>
       )}
 
-      {/* Interactive Global Modals */}
+      {/* Global Modals */}
       <AiTutorModal
         isOpen={isAiOpen}
         onClose={() => {
@@ -127,7 +123,7 @@ export const App: React.FC = () => {
         onClose={() => setActiveLkpdWorksheet(null)}
         onSubmitSuccess={handleWorksheetSubmit}
       />
-    </DeviceFrame>
+    </AppLayout>
   );
 };
 
