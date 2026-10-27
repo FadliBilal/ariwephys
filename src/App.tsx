@@ -52,10 +52,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <AppLayout
-      onOpenAr={handleOpenAr}
-      onOpenAi={() => handleOpenAi()}
-    >
+    <AppLayout>
       {!isLoggedIn ? (
         <LoginScreen onLoginSuccess={handleLoginSuccess} />
       ) : (
